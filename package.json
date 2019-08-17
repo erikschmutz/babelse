@@ -1,0 +1,22 @@
+{
+  "name": "babelse",
+  "version": "1.0.1",
+  "description": "Instantly get a babel src and bin folder with babel reload",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch",
+    "execute": "node dist/index",
+    "build": "babel --presets es2015 -d bin/ index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "babel src --out-dir dist --watch > babel.log & ./scripts/start.sh"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/node": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-env": "^7.0.0-rc.1"
+  },
+  "author": "Erik Rehn",
+  "license": "ISC"
+}
